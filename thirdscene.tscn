@@ -1,7 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmox8cofd6fsm"]
+[gd_scene load_steps=7 format=4 uid="uid://cmox8cofd6fsm"]
 
 [ext_resource type="Script" uid="uid://c0fo0yhcax56f" path="res://player.gd" id="1_mjq33"]
+[ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="1_pclr6"]
 [ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://idle.png" id="2_pclr6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3vgh"]
+texture = ExtResource("1_pclr6")
+0:2/size_in_atlas = Vector2i(45, 43)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-360.52682, -341.21887, 349.22467, -358.03763, 359.31598, 355.07767, -370.61807, 348.3502)
+
+[sub_resource type="TileSet" id="TileSet_laqvw"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_p3vgh")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3vgh"]
 size = Vector2(53, 74)
@@ -12,6 +23,11 @@ size = Vector2(53, 74)
 offset_right = 1154.0
 offset_bottom = 650.0
 color = Color(0.007843138, 0.14117648, 0.03137255, 1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="ColorRect"]
+scale = Vector2(0.05, 0.05)
+tile_map_data = PackedByteArray("AAARAP8BAAAAAAIAAAASAP8BAAAAAAIAAAATAP8BAAAAAAIAAAAUAP8BAAAAAAIAAAAVAP8BAAAAAAIAAAAWAP8BAAAAAAIAAAAXAP8BAAAAAAIAAAAYAAACAAAAAAIAAAAZAAACAAAAAAIAAAAaAAACAAAAAAIAAAAbAAACAAAAAAIAAAAcAAACAAAAAAIAAAAdAAECAAAAAAIAAAAeAAECAAAAAAIAAAAfAAECAAAAAAIAAAAgAAECAAAAAAIAAAAhAAICAAAAAAIAAAAiAAICAAAAAAIAAAAjAAICAAAAAAIAAAAkAAICAAAAAAIAAAAlAAICAAAAAAIAAAAmAAICAAAAAAIAAAAnAAICAAAAAAIAAAAoAAICAAAAAAIAAAApAAICAAAAAAIAAAAqAAICAAAAAAIAAAArAAICAAAAAAIAAAAsAAICAAAAAAIAAAAtAAICAAAAAAIAAAAuAAICAAAAAAIAAAAvAAICAAAAAAIAAAAwAAMCAAAAAAIAAAAxAAMCAAAAAAIAAAAyAAMCAAAAAAIAAAAzAAMCAAAAAAIAAAA0AAQCAAAAAAIAAAA1AAQCAAAAAAIAAAA2AAQCAAAAAAIAAAA3AAUCAAAAAAIAAAA4AAUCAAAAAAIAAAA5AAUCAAAAAAIAAAA6AAYCAAAAAAIAAAA7AAYCAAAAAAIAAAA8AAYCAAAAAAIAAAA9AAYCAAAAAAIAAAA+AAYCAAAAAAIAAAA/AAcCAAAAAAIAAABAAAcCAAAAAAIAAABBAAgCAAAAAAIAAABBAAcCAAAAAAIAAABCAAYCAAAAAAIAAABCAAUCAAAAAAIAAABBAAUCAAAAAAIAAABBAAQCAAAAAAIAAABBAAMCAAAAAAIAAABCAAMCAAAAAAIAAAA=")
+tile_set = SubResource("TileSet_laqvw")
 
 [node name="player" type="CharacterBody2D" parent="ColorRect"]
 position = Vector2(4, 0)

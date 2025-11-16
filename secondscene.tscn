@@ -21,7 +21,7 @@ sources/1 = SubResource("TileSetAtlasSource_xrm6i")
 size = Vector2(53, 74)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2srjs"]
-size = Vector2(58.5, 90.5)
+size = Vector2(83.25, 92.25)
 
 [node name="Node" type="Node"]
 
@@ -53,9 +53,9 @@ scale = Vector2(0.06469727, 0.073893234)
 texture = ExtResource("4_pnhpy")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(1128, 157)
+position = Vector2(1128, 148)
 script = ExtResource("5_bcrng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.25, -10.25)
+position = Vector2(-14, -3)
 shape = SubResource("RectangleShape2D_2srjs")
