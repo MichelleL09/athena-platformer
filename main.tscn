@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://kdqk7tj5t1lf"]
+[gd_scene load_steps=10 format=4 uid="uid://kdqk7tj5t1lf"]
 
 [ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://idle.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://c0fo0yhcax56f" path="res://player.gd" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://b6h2kim2ioi85" path="res://ma'at.png" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://dv5eu2qfmbis2" path="res://area_2d1.gd" id="5_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("2_0xm2m")
@@ -18,6 +20,9 @@ sources/1 = SubResource("TileSetAtlasSource_0xm2m")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(43, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(67, 92.5)
 
 [node name="Node2D" type="Node2D"]
 
@@ -42,3 +47,19 @@ texture = ExtResource("1_ig7tw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(21, 377)
 shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1123.0001, 382)
+scale = Vector2(0.07373046, 0.0686849)
+texture = ExtResource("4_1bvp3")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1125, 389)
+script = ExtResource("5_lquwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-5.5, -9.25)
+shape = SubResource("RectangleShape2D_7mycd")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

@@ -32,11 +32,11 @@ tile_set = SubResource("TileSet_pnhpy")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(121.5, 174.625)
+position = Vector2(16.000008, 350)
 scale = Vector2(0.10445206, 0.09269006)
 texture = ExtResource("2_f2utp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(121.5, 175)
+position = Vector2(16, 349)
 shape = SubResource("RectangleShape2D_bcrng")
 disabled = true

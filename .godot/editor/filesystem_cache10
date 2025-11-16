@@ -1,7 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763259065
+::res://::1763266788
 icon.svg::CompressedTexture2D::1621233552098675436::1763251554::1763251554::1::::<><><>0<>0<>929e2f87c6b586fb5f233fa3858ebc91<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 idle.png::CompressedTexture2D::3778788043881872190::1763248914::1763251962::1::::<><><>0<>0<>38bf4b340fe7d805480052b4290733ad<>res://.godot/imported/idle.png-345bd841398ecb5f0be76f8faade9523.ctex::
-main.tscn::PackedScene::709072610014090171::1763259065::0::1::::<><><>0<>0<><>::uid://bt3qc7tin2c7o::::res://idle.png<>uid://fy2diepp32ae::::res://sand_block.webp
+ma'at.png::CompressedTexture2D::4578383137456728816::1763266747::1763266792::1::::<><><>0<>0<>cbf756413d75df3d5fe419944647195a<>res://.godot/imported/ma'at.png-e6888a78577944fd6fe506eacd285672.ctex::
+main.tscn::PackedScene::709072610014090171::1763262116::0::1::::<><><>0<>0<><>::uid://bt3qc7tin2c7o::::res://idle.png<>uid://fy2diepp32ae::::res://sand_block.webp<>uid://c0fo0yhcax56f::::res://player.gd
 README.md::TextFile::-1::1763243725::0::1::::<><><>0<>0<><>::
+player.gd::GDScript::6538780301319508435::1763260377::0::1::::<>CharacterBody2D<><>0<>0<><>::
+secondscene.tscn::PackedScene::8737535417557736341::1763264774::0::1::::<><><>0<>0<><>::uid://fy2diepp32ae::::res://sand_block.webp<>uid://bt3qc7tin2c7o::::res://idle.png
 sand_block.webp::CompressedTexture2D::402134427542732704::1763251584::1763259204::1::::<><><>0<>0<>0992627836d9e01fab7fc7e2820cf29a<>res://.godot/imported/sand_block.webp-7a29491882a467c0384a28dd54ff25df.ctex::
