@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://kdqk7tj5t1lf"]
+[gd_scene load_steps=11 format=4 uid="uid://kdqk7tj5t1lf"]
 
+[ext_resource type="Texture2D" uid="uid://x5x4ea7psmw1" path="res://parthybackground.jpeg" id="1_7mycd"]
 [ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://idle.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://c0fo0yhcax56f" path="res://player.gd" id="2_h2yge"]
@@ -19,14 +20,20 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_0xm2m")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
-size = Vector2(43, 64)
+size = Vector2(30.5, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
 size = Vector2(67, 92.5)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(574.375, 322.75006)
+scale = Vector2(0.3917148, 0.3841318)
+texture = ExtResource("1_7mycd")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 1151.0
 offset_bottom = 667.0
 color = Color(0.007843138, 0.14117648, 0.03137255, 1)
@@ -40,13 +47,17 @@ tile_set = SubResource("TileSet_lquwl")
 script = ExtResource("2_h2yge")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
-position = Vector2(20.000011, 377)
-scale = Vector2(0.086472645, 0.08304093)
+position = Vector2(27.625011, 386.75)
+scale = Vector2(0.06035963, 0.06023389)
 texture = ExtResource("1_ig7tw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(21, 377)
+position = Vector2(27.25, 385.5)
 shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(27, 387)
+zoom = Vector2(3, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1123.0001, 382)

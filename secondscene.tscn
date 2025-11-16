@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://dwqr6xd114jdd"]
+[gd_scene load_steps=11 format=4 uid="uid://dwqr6xd114jdd"]
 
 [ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="1_2ew57"]
+[ext_resource type="Texture2D" uid="uid://x5x4ea7psmw1" path="res://parthybackground.jpeg" id="1_bcrng"]
 [ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://idle.png" id="2_f2utp"]
 [ext_resource type="Script" uid="uid://c0fo0yhcax56f" path="res://player.gd" id="2_xrm6i"]
 [ext_resource type="Texture2D" uid="uid://dt5m1ie1lu2qk" path="res://minerva.png" id="4_pnhpy"]
@@ -18,14 +19,20 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_xrm6i")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcrng"]
-size = Vector2(53, 74)
+size = Vector2(40.5, 51)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2srjs"]
-size = Vector2(83.25, 92.25)
+size = Vector2(1325.2803, 1285.6389)
 
 [node name="Node" type="Node"]
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(574.375, 322.75006)
+scale = Vector2(0.3917148, 0.3841318)
+texture = ExtResource("1_bcrng")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 1154.0
 offset_bottom = 650.0
 color = Color(0.007843138, 0.14117648, 0.03137255, 1)
@@ -39,23 +46,31 @@ tile_set = SubResource("TileSet_pnhpy")
 script = ExtResource("2_xrm6i")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
-position = Vector2(16.000008, 350)
-scale = Vector2(0.10445206, 0.09269006)
+position = Vector2(23.250004, 362.8125)
+scale = Vector2(0.079623304, 0.0627193)
 texture = ExtResource("2_f2utp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(16, 349)
+position = Vector2(22.25, 360.5)
 shape = SubResource("RectangleShape2D_bcrng")
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(27, 387)
+zoom = Vector2(3, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1127.125, 148.75)
 scale = Vector2(0.06469727, 0.073893234)
 texture = ExtResource("4_pnhpy")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(1128, 148)
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+position = Vector2(-17.388672, 111.64746)
 script = ExtResource("5_bcrng")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-14, -3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(-61.82617, -142.09729)
+scale = Vector2(1.0000004, 1)
 shape = SubResource("RectangleShape2D_2srjs")
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="Sprite2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Sprite2D/Area2D" to="Sprite2D/Area2D" method="_on_body_exited"]

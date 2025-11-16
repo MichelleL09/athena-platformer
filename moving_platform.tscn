@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="1_q06lf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrpga"]
-size = Vector2(79, 31)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q06lf"]
+size = Vector2(76, 29)
 
 [sub_resource type="Animation" id="Animation_f8lbu"]
 resource_name = "move"
@@ -53,10 +53,11 @@ scale = Vector2(0.10694446, 0.04166667)
 texture = ExtResource("1_q06lf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
-position = Vector2(321.5, 142.5)
-shape = SubResource("RectangleShape2D_hrpga")
+position = Vector2(322, 143.5)
+shape = SubResource("RectangleShape2D_q06lf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D"]
 libraries = {
 &"": SubResource("AnimationLibrary_n0cw3")
 }
+autoplay = "move"
