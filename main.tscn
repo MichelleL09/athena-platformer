@@ -1,10 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://kdqk7tj5t1lf"]
+[gd_scene load_steps=3 format=3 uid="uid://kdqk7tj5t1lf"]
 
-[ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://idle.png" id="1_ig7tw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(46, 91)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="SandBlock" type="Sprite2D" parent="."]
-position = Vector2(47.999996, 584)
-scale = Vector2(0.09444444, 0.0916667)
+[node name="player" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+position = Vector2(41.125004, 59.43752)
+scale = Vector2(0.09546232, 0.11359645)
 texture = ExtResource("1_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(40, 57.5)
+shape = SubResource("RectangleShape2D_ig7tw")
