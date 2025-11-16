@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://dwqr6xd114jdd"]
+[gd_scene load_steps=10 format=4 uid="uid://dwqr6xd114jdd"]
 
 [ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="1_2ew57"]
 [ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://idle.png" id="2_f2utp"]
+[ext_resource type="Script" uid="uid://c0fo0yhcax56f" path="res://player.gd" id="2_xrm6i"]
+[ext_resource type="Texture2D" uid="uid://dt5m1ie1lu2qk" path="res://minerva.png" id="4_pnhpy"]
+[ext_resource type="Script" uid="uid://2vaym3tn4rff" path="res://area_2d2.gd" id="5_bcrng"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrm6i"]
 texture = ExtResource("1_2ew57")
@@ -17,6 +20,9 @@ sources/1 = SubResource("TileSetAtlasSource_xrm6i")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcrng"]
 size = Vector2(53, 74)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2srjs"]
+size = Vector2(58.5, 90.5)
+
 [node name="Node" type="Node"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -29,14 +35,27 @@ scale = Vector2(0.05, 0.05)
 tile_map_data = PackedByteArray("AAACAD4AAQAAAAEAAAAGAD4AAQAAAAEAAAAJAD4AAQAAAAEAAAAJADkAAQAAAAEAAAAMADkAAQAAAAEAAAAHAEIAAQAAAAEAAAACAEIAAQAAAAEAAAAWADEAAQAAAAEAAAAgACkAAQAAAAEAAAAsACAAAQAAAAEAAAA8ACoAAQAAAAEAAGA9ACoAAQAAAAEAAGA+ACoAAQAAAAEAAGA/ACoAAQAAAAEAAGBAACoAAQAAAAEAAGBBACoAAQAAAAEAAGBCACoAAQAAAAEAAGBDACoAAQAAAAEAAGBEACoAAQAAAAEAAGBFACoAAQAAAAEAAGBGACoAAQAAAAEAAGA/AC0AAQAAAAEAAGBEAC0AAQAAAAEAAGBWADQAAQAAAAEAAGBXADQAAQAAAAEAAGBYADQAAQAAAAEAAGBZADQAAQAAAAEAAGBaADQAAQAAAAEAAGBbADQAAQAAAAEAAGBcADQAAQAAAAEAAGBdADQAAQAAAAEAAGBdADUAAQAAAAEAAGBeADUAAQAAAAEAAGBfADUAAQAAAAEAAGBgADUAAQAAAAEAAGBgADQAAQAAAAEAAGBTADgAAQAAAAEAAGBUADgAAQAAAAEAAGBVADgAAQAAAAEAAGBWADgAAQAAAAEAAGBXADgAAQAAAAEAAGBXADkAAQAAAAEAAGBYADkAAQAAAAEAAGBZADkAAQAAAAEAAGBaADkAAQAAAAEAAGBbADkAAQAAAAEAAGBbADgAAQAAAAEAAGBTAD0AAQAAAAEAAGBXAD0AAQAAAAEAAGBbAD0AAQAAAAEAAGBeADoAAQAAAAEAAGBPADoAAQAAAAEAAGBjADkAAQAAAAEAAGBiADYAAQAAAAEAAGByAC4AAQAAAAEAAGB2AC4AAQAAAAEAAGB6AC4AAQAAAAEAAGB0ADIAAQAAAAEAAGB5ADEAAQAAAAEAAGCHACkAAQAAAAEAAGCLACYAAQAAAAEAAGCQACYAAQAAAAEAAGCTACYAAQAAAAEAAGCWACYAAQAAAAEAAGCLACoAAQAAAAEAAGCOACoAAQAAAAEAAGCPACoAAQAAAAEAAGCQACoAAQAAAAEAAGCRACoAAQAAAAEAAGCSACoAAQAAAAEAAGCTACoAAQAAAAEAAGCPAC4AAQAAAAEAAGCRAC4AAQAAAAEAAGCYACcAAQAAAAEAAGCXACkAAQAAAAEAAGCkAB8AAQAAAAEAAGClAB8AAQAAAAEAAGCmAB8AAQAAAAEAAGCnAB8AAQAAAAEAAGCoAB8AAQAAAAEAAGCpAB8AAQAAAAEAAGCqAB8AAQAAAAEAAGCrAB8AAQAAAAEAAGCsAB8AAQAAAAEAAGCtAB8AAQAAAAEAAGCuAB8AAQAAAAEAAGCvAB8AAQAAAAEAAGCwAB8AAQAAAAEAAGCxAB8AAQAAAAEAAGCyAB8AAQAAAAEAAGCzAB8AAQAAAAEAAGCoACMAAQAAAAEAAGCpACMAAQAAAAEAAGCqACMAAQAAAAEAAGCrACMAAQAAAAEAAGCsACMAAQAAAAEAAGCtACMAAQAAAAEAAGCuACMAAQAAAAEAAGCvACMAAQAAAAEAAGCwACMAAQAAAAEAAGCxACMAAQAAAAEAAGCyACMAAQAAAAEAAGCzACMAAQAAAAEAAGC0ACMAAQAAAAEAAGCrACgAAQAAAAEAAGCvACcAAQAAAAEAAGCxACcAAQAAAAEAAGCwACgAAQAAAAEAAGCxACgAAQAAAAEAAGA=")
 tile_set = SubResource("TileSet_pnhpy")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="player" type="CharacterBody2D" parent="."]
+script = ExtResource("2_xrm6i")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="player"]
 position = Vector2(16.000008, 350)
 scale = Vector2(0.10445206, 0.09269006)
 texture = ExtResource("2_f2utp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(16, 349)
 shape = SubResource("RectangleShape2D_bcrng")
-disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1127.125, 148.75)
+scale = Vector2(0.06469727, 0.073893234)
+texture = ExtResource("4_pnhpy")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1128, 157)
+script = ExtResource("5_bcrng")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.25, -10.25)
+shape = SubResource("RectangleShape2D_2srjs")
