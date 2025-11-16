@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=4 uid="uid://dwqr6xd114jdd"]
+[gd_scene load_steps=12 format=4 uid="uid://dwqr6xd114jdd"]
 
 [ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="1_2ew57"]
 [ext_resource type="Texture2D" uid="uid://x5x4ea7psmw1" path="res://parthybackground.jpeg" id="1_bcrng"]
+[ext_resource type="Texture2D" uid="uid://bve7ul4qs31nt" path="res://death.png" id="2_2srjs"]
 [ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://idle.png" id="2_f2utp"]
 [ext_resource type="Script" uid="uid://c0fo0yhcax56f" path="res://player.gd" id="2_xrm6i"]
 [ext_resource type="Texture2D" uid="uid://dt5m1ie1lu2qk" path="res://minerva.png" id="4_pnhpy"]
@@ -31,6 +32,11 @@ position = Vector2(574.375, 322.75006)
 scale = Vector2(0.3917148, 0.3841318)
 texture = ExtResource("1_bcrng")
 
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(575, 964.00006)
+scale = Vector2(0.39040166, 0.391278)
+texture = ExtResource("2_2srjs")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 offset_right = 1154.0
@@ -55,8 +61,9 @@ position = Vector2(22.25, 360.5)
 shape = SubResource("RectangleShape2D_bcrng")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(27, 387)
+position = Vector2(192, 385)
 zoom = Vector2(3, 3)
+limit_left = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1127.125, 148.75)
