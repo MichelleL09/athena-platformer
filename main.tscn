@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://kdqk7tj5t1lf"]
+[gd_scene load_steps=7 format=4 uid="uid://kdqk7tj5t1lf"]
 
 [ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://idle.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="2_0xm2m"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
-size = Vector2(67, 103)
+[ext_resource type="Script" uid="uid://c0fo0yhcax56f" path="res://player.gd" id="2_h2yge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("2_0xm2m")
@@ -14,13 +12,22 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-347.58588, -349.2814, 357.7591, -352.6725, 347.58588, 362.8457, -361.1502, 362.8457)
 
 [sub_resource type="TileSet" id="TileSet_lquwl"]
-tile_size = Vector2i(32, 32)
+tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_0xm2m")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(67, 103)
+
 [node name="Node2D" type="Node2D"]
 
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(0.05, 0.05)
+tile_map_data = PackedByteArray("AAAAAAAAAAAdABcAAAA6AD4AAQAAAAAAAAA7AD4AAQAAAAAAAABAAD4AAQAAAAAAAABBAD4AAQAAAAAAAABCAD4AAQAAAAAAAABDAD4AAQAAAAAAAABEAD4AAQAAAAAAAABFAD4AAQAAAAAAAABHAD4AAQAAAAAAAABIAD4AAQAAAAAAAABJAD4AAQAAAAAAAABmADwAAQAAAAAAAABnADwAAQAAAAAAAABoADwAAQAAAAAAAABpADwAAQAAAAAAAABqADwAAQAAAAAAAABrADwAAQAAAAAAAABsADwAAQAAAAAAAABtADwAAQAAAAAAAABuADwAAQAAAAAAAABvADwAAQAAAAAAAABwADwAAQAAAAAAAABxADwAAQAAAAAAAAByADwAAQAAAAAAAABzADwAAQAAAAAAAAB0ADwAAQAAAAAAAAB0ADsAAQAAAAAAAABGAD4AAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_lquwl")
+
 [node name="player" type="CharacterBody2D" parent="."]
+script = ExtResource("2_h2yge")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
 position = Vector2(89.24999, 91.875)
@@ -30,8 +37,3 @@ texture = ExtResource("1_ig7tw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(89.5, 89.5)
 shape = SubResource("RectangleShape2D_h2yge")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="player"]
-scale = Vector2(0.05, 0.05)
-tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 29, 0, 23, 0, 0, 0, 82, 0, 12, 1, 1, 0, 0, 0, 0, 0, 0, 0, 113, 0, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0)
-tile_set = SubResource("TileSet_lquwl")
