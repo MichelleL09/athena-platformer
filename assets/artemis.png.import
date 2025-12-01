@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt5m1ie1lu2qk"
-path="res://.godot/imported/minerva.png-22c2f90cede9f50fc2f48e32a8528d75.ctex"
+uid="uid://d1yc3mnjicn6w"
+path="res://.godot/imported/artemis.png-afa6547da102046d9b0fce77e30e31fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minerva.png"
-dest_files=["res://.godot/imported/minerva.png-22c2f90cede9f50fc2f48e32a8528d75.ctex"]
+source_file="res://assets/artemis.png"
+dest_files=["res://.godot/imported/artemis.png-afa6547da102046d9b0fce77e30e31fe.ctex"]
 
 [params]
 

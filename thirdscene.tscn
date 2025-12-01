@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=4 uid="uid://cmox8cofd6fsm"]
 
-[ext_resource type="Texture2D" uid="uid://x5x4ea7psmw1" path="res://parthybackground.jpeg" id="1_bh7rj"]
+[ext_resource type="Texture2D" uid="uid://x5x4ea7psmw1" path="res://assets/parthybackground.jpeg" id="1_bh7rj"]
 [ext_resource type="Script" uid="uid://c0fo0yhcax56f" path="res://player.gd" id="1_mjq33"]
-[ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="1_pclr6"]
-[ext_resource type="Texture2D" uid="uid://bve7ul4qs31nt" path="res://death.png" id="2_6vkpm"]
-[ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://idle.png" id="2_pclr6"]
+[ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://assets/sand_block.webp" id="1_pclr6"]
+[ext_resource type="Texture2D" uid="uid://bve7ul4qs31nt" path="res://assets/death.png" id="2_6vkpm"]
+[ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://assets/idle.png" id="2_pclr6"]
 [ext_resource type="PackedScene" uid="uid://dub40to47hq14" path="res://moving_platform.tscn" id="4_p3vgh"]
-[ext_resource type="Texture2D" uid="uid://d1yc3mnjicn6w" path="res://artemis.png" id="5_laqvw"]
+[ext_resource type="Texture2D" uid="uid://d1yc3mnjicn6w" path="res://assets/artemis.png" id="5_laqvw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3vgh"]
 texture = ExtResource("1_pclr6")

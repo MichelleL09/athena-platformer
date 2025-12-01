@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt3qc7tin2c7o"
-path="res://.godot/imported/idle.png-345bd841398ecb5f0be76f8faade9523.ctex"
+uid="uid://fy2diepp32ae"
+path="res://.godot/imported/sand_block.webp-a82306729ba3ade3eba1af3ff410e0f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://idle.png"
-dest_files=["res://.godot/imported/idle.png-345bd841398ecb5f0be76f8faade9523.ctex"]
+source_file="res://assets/sand_block.webp"
+dest_files=["res://.godot/imported/sand_block.webp-a82306729ba3ade3eba1af3ff410e0f5.ctex"]
 
 [params]
 

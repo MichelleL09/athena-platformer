@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=4 uid="uid://dwqr6xd114jdd"]
 
-[ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://sand_block.webp" id="1_2ew57"]
-[ext_resource type="Texture2D" uid="uid://x5x4ea7psmw1" path="res://parthybackground.jpeg" id="1_bcrng"]
-[ext_resource type="Texture2D" uid="uid://bve7ul4qs31nt" path="res://death.png" id="2_2srjs"]
-[ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://idle.png" id="2_f2utp"]
+[ext_resource type="Texture2D" uid="uid://fy2diepp32ae" path="res://assets/sand_block.webp" id="1_2ew57"]
+[ext_resource type="Texture2D" uid="uid://x5x4ea7psmw1" path="res://assets/parthybackground.jpeg" id="1_bcrng"]
+[ext_resource type="Texture2D" uid="uid://bve7ul4qs31nt" path="res://assets/death.png" id="2_2srjs"]
+[ext_resource type="Texture2D" uid="uid://bt3qc7tin2c7o" path="res://assets/idle.png" id="2_f2utp"]
 [ext_resource type="Script" uid="uid://c0fo0yhcax56f" path="res://player.gd" id="2_xrm6i"]
-[ext_resource type="Texture2D" uid="uid://dt5m1ie1lu2qk" path="res://minerva.png" id="4_pnhpy"]
+[ext_resource type="Texture2D" uid="uid://dt5m1ie1lu2qk" path="res://assets/minerva.png" id="4_pnhpy"]
 [ext_resource type="Script" uid="uid://2vaym3tn4rff" path="res://area_2d2.gd" id="5_bcrng"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrm6i"]

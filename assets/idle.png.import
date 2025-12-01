@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2bdrkhx4i06"
-path="res://.godot/imported/parthbackground.jpeg-cbfbc5f23208ed4e70983b7efd4e9ab6.ctex"
+uid="uid://bt3qc7tin2c7o"
+path="res://.godot/imported/idle.png-600a6709c1a21ab5f528af7b11a02560.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://parthbackground.jpeg"
-dest_files=["res://.godot/imported/parthbackground.jpeg-cbfbc5f23208ed4e70983b7efd4e9ab6.ctex"]
+source_file="res://assets/idle.png"
+dest_files=["res://.godot/imported/idle.png-600a6709c1a21ab5f528af7b11a02560.ctex"]
 
 [params]
 

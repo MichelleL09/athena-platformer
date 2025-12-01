@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x5x4ea7psmw1"
-path="res://.godot/imported/parthybackground.jpeg-0cd7e79f20d1797531d562c764ee4d1d.ctex"
+uid="uid://c2bdrkhx4i06"
+path="res://.godot/imported/parthbackground.jpeg-d99930c951c25853ab5bbbcb5b1affcb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://parthybackground.jpeg"
-dest_files=["res://.godot/imported/parthybackground.jpeg-0cd7e79f20d1797531d562c764ee4d1d.ctex"]
+source_file="res://assets/parthbackground.jpeg"
+dest_files=["res://.godot/imported/parthbackground.jpeg-d99930c951c25853ab5bbbcb5b1affcb.ctex"]
 
 [params]
 
